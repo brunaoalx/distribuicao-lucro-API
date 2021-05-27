@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,6 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DistribuicaoLucorAPI.Models\DistribuicaoLucorAPI.Models.csproj" />
+    <ProjectReference Include="..\DistribuicaoLucroAPI.Business\DistribuicaoLucroAPI.Business.csproj" />
+    <ProjectReference Include="..\DistribuicaoLucrosAPI.DataAccess\DistribuicaoLucrosAPI.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

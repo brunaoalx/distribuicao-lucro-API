@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\DistribuicaoLucorAPI.Models\DistribuicaoLucorAPI.Models.csproj" />
   </ItemGroup>
 
 </Project>

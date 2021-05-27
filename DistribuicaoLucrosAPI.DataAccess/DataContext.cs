@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DistribuicaoLucorAPI.Models.Implementation;
+using DistribuicaoLucorAPI.Models.Interface;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace DistribuicaoLucrosAPI.DataAccess
@@ -10,6 +12,8 @@ namespace DistribuicaoLucrosAPI.DataAccess
         {
 
         }
+
+        public DbSet<Funcionario> Funcionarios { get; set; }
 
     }
 }

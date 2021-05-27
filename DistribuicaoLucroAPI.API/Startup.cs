@@ -1,6 +1,8 @@
+using DistribuicaoLucrosAPI.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +27,11 @@ namespace DistribuicaoLucroAPI.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database")
+            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+
+            services.AddScoped<DataContext, DataContext>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
