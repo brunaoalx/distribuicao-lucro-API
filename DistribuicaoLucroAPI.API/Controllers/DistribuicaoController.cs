@@ -1,6 +1,7 @@
 ﻿using DistribuicaoLucorAPI.Models;
 using DistribuicaoLucorAPI.Models.Interface;
 using DistribuicaoLucroAPI.Business;
+using DistribuicaoLucroAPI.Business.Implementation;
 using DistribuicaoLucroAPI.Business.Interface;
 using DistribuicaoLucrosAPI.DataAccess;
 using Microsoft.AspNetCore.Mvc;

@@ -26,9 +26,9 @@ namespace DistribuicaoLucroAPI.API.Controllers
 
         // GET: api/<FuncionarioController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<List<Funcionario>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await funcionarioBusiness.ListarFuncionarios();
         }
 
         // GET api/<FuncionarioController>/5

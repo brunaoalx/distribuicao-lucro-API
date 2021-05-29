@@ -45,6 +45,14 @@ namespace DistribuicaoLucroAPI.Business.Implementation
         }
 
 
+        public async Task<List<Funcionario>> ListarFuncionarios()
+        {
+
+            return await funcionarioRepository.SelecionarTodosFuncionarios();
+
+        }
+
+
 
 
 
